@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, #f3e7e9, #e3eeff);
+        }
+    </style>
+    <title>Job Openings</title>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-4">
+    <div class="text-center">
+        <h1 class="text-2xl font-bold text-gray-700 mb-2">Current Job Openings</h1>
+        <p class="text-gray-600 mb-6">Please review the jobs listed below to find the best match for your skills and experience!</p>
+        <img alt="Illustration of hands joined together in a circle" class="mx-auto mb-6" height="200" src="https://storage.googleapis.com/a1aa/image/LtHzrb2U3tZ4CV60xEkDoiRPlKuQpu66RmXbUSvqi90e7YzJA.jpg" width="300"/>
+
+        <div id="job-list" class="space-y-2 mb-8">
+            <!-- Job openings will be dynamically inserted here -->
+        </div>
+
+        <h2 class="text-xl font-bold text-gray-700 mb-4">Why work at EaseEvent Planning Assistant</h2>
+        <p class="text-gray-600 mb-4">At EaseEvent Planning Assistant, you’ll be part of a dynamic, fast-paced environment with a flat organizational structure.</p>
+        <p class="text-gray-600 mb-4">Our motto isn’t just “Get it done first, then refine it, and finally, elevate it.” for the sake of it ;)</p>
+        <p class="text-gray-600 mb-4">We’re constantly exploring new growth opportunities, so there’s plenty of room to take on fresh tasks and help shape the company’s future. We highly value the ability to make informed, independent decisions and demonstrate how they contribute to the business.</p>
+        <p class="text-gray-600 mb-4">Want to join us?</p>
+        <a class="text-purple-600 hover:underline" href="https://www.linkedin.com/in/yogesh-sahu-95431a222?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Send us a message! →</a>
+    </div>
+
+    <script>
+        // Simulate fetching job openings from an API
+        const jobOpenings = [
+            { title: "AI & LLM Solutions Engineer" },
+            { title: "iOS, VisionOS Developer" },
+            { title: "Marketing Executive" }
+        ];
+
+        const jobListContainer = document.getElementById('job-list');
+
+        jobOpenings.forEach(job => {
+            const button = document.createElement('button');
+            button.className = 'block w-full text-left text-purple-600 bg-purple-100 py-2 px-4 rounded-md shadow-sm hover:bg-purple-200';
+            button.innerText = job.title;
+            jobListContainer.appendChild(button);
+        });
+    </script>
+</body>
+</html>

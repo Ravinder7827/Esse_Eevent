@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post-Event</title>
+  <link rel="stylesheet" href="postevent.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+
+  
+</head>
+<body>
+  <!-- Sidebar Start -->
+  <div class="sidebar">
+    <div class="logo">
+      <img src="5.png" alt="Logo" class="logo" />
+    </div>
+    <div class="menu">
+      <h3 class="app__left-panel-button"><a href="index.html">Untitled</a>
+          <span class="bp3-icon-standard bp3-icon-chevron-down app__left-panel-arrow"></span>
+      </h3>
+      <ul>
+          
+          <li class="app__left-panel-category">Venues & Vendors</li>
+          <ul>
+              <li><a href="reception.html">Event</a></li>
+              <li><a href="allvendor.html">My Vendors</a></li>
+          </ul>
+          <li class="app__left-panel-category">Planning Tools</li>
+          <ul>
+              <li><a href="editguest.html">Guest List</a></li>
+              <li><a href="checklist.html">Checklist</a></li>
+              <li><a href="budget.html">Budget</a></li>
+              <li><a href="event.html">Event Itinerary</a></li>
+              <li><a href="notes.html">Notes</a></li>
+              <li><a href= "postevent.html">Post-Event</a></li>
+          </ul>
+      </ul>
+  </div>
+</div>
+  <!-- Sidebar End -->
+
+  <div class="main-content">
+    <!-- Navbar Start -->
+    <header>
+      <div class="header-content">
+        <h1>Find Vendor</h1>
+        <div class="user-menu">
+          <span style="display: block; text-align: center; font-size: 24px; color: #333;">My Projects</span>
+          <div class="profile-icons">
+            <div class="user-icon"><a href="index.html">+</a></div>
+            <div class="profile-options">
+                <a href="login.html">Logout</a> | <a href="feedback.html">Feedback</a>
+            </div>
+        </div>
+      </div>
+    </header>
+<center>
+     <!-- Navbar End -->
+ <div class="w-full max-w-2xl p-6 bg-white rounded-lg shadow-md mx-auto" style="display: flex; flex-direction: column; align-items: center;"></div>
+ <h1 class="text-center text-2xl font-semibold text-gray-800">Post-Event</h1>
+ <p class="text-center text-gray-600 mt-2">Upload your photos from the event and leave feedback on how everything went.</p>
+
+ <div class="mt-6" style="width: 100%;">
+     <form action="postevent.php" method="POST" enctype="multipart/form-data" id="uploadForm">
+         <input type="text" name="comment" id="commentInput" placeholder="Click and type comment here" 
+                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" required style="margin-bottom: 24px;">
+
+         <div class="mt-6 border-2 border-dashed border-purple-300 rounded-lg p-6 text-center" style="position: relative;">
+             <i class="fas fa-cloud-upload-alt text-4xl text-gray-400"></i>
+             <h2 class="mt-4 text-xl font-semibold text-gray-800">Upload photos</h2>
+             <p class="mt-2 text-gray-600">Try dropping some photos here, or click to select files to upload.</p>
+             <p class="mt-2 text-gray-600">Limit is 30 photos.</p>
+             <p class="mt-2 text-gray-600">Photos must be no larger than 20MB.</p>
+             <input type="file" name="files[]" id="fileInput" multiple required style="display: none;">
+             <button type="button" id="fileSelectButton" style="margin-top: 16px; padding: 12px 16px; background-color: #6b46d4; color: white; border: none; border-radius: 0.375rem; cursor: pointer; transition: background-color 0.2s;" onclick="document.getElementById('fileInput').click();">Select Files</button>
+             <button type="button" id="uploadButton" style="margin-top: 16px; padding: 12px 16px; background-color: #6b46d4; color: white; border: none; border-radius: 0.375rem; cursor: pointer; transition: background-color 0.2s;">Upload</button>
+             <button type="button" id="downloadPDF" style="margin-top: 16px; padding: 12px 16px; background-color: #48bb78; color: white; border: none; border-radius: 0.375rem; cursor: pointer; transition: background-color 0.2s;">Download PDF</button>
+         </div>
+     </form>
+     <div class="image-container" id="imageContainer" style="margin-top: 20px;"></div>
+ </div>
+</div>
+
+</center>
+  <script src="postevent.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Budget Planner</title>
+    <link rel="stylesheet" href="budget.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+
+</head>
+
+<body>
+    
+    <!-- Sidebar Start -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="5.png" alt="Logo" class="logo" />
+        </div>
+        <div class="menu">
+            <h3 class="app__left-panel-button"><a href="index.html">Untitled</a>
+                <span class="bp3-icon-standard bp3-icon-chevron-down app__left-panel-arrow"></span>
+            </h3>
+            <ul>
+                
+                <li class="app__left-panel-category">Venues & Vendors</li>
+                <ul>
+                    <li><a href="reception.html">Event</a></li>
+                    <li><a href="allvendor.html">My Vendors</a></li>
+                </ul>
+                <li class="app__left-panel-category">Planning Tools</li>
+                <ul>
+                    <li><a href="editguest.html">Guest List</a></li>
+                    <li><a href="checklist.html">Checklist</a></li>
+                    <li><a href="budget.html">Budget</a></li>
+                    <li><a href="event.html">Event Itinerary</a></li>
+                    <li><a href="notes.html">Notes</a></li>
+                    <li><a href="postevent.html">Post-Event</a></li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+    <!-- Sidebar End -->
+
+    <div class="main-content">
+        <header>
+            <div class="header-content">
+                <h1 style="margin-left:20px;">Find vendor </h1>
+                <div class="user-menu">
+                    <span style="display: block; text-align: center; font-size: 24px; color: #333;">My Projects</span>
+                    <div class="profile-icons">
+                        <div class="user-icon"><a href="index.html">+</a></div>
+                        <div class="profile-options">
+                            <a href="login.html">Logout</a> | <a href="feedback.html">Feedback</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="budget">
+            <h2>Budget</h2>
+            <p>Keep track of every penny you spend. Drag and drop your budget categories and individual items into your preferred order.</p>
+            <div class="budget-value">
+                <h3>Budget <span>₹0.00</span></h3>
+                <a href="#" class="set-value">Set value</a>
+            </div>
+
+            <div class="budget-categories">
+                <div class="category">
+                    <h4>Entertainment</h4>
+                    <div class="item">
+                        <span>Band</span>
+                        <span class="price">₹0.00</span>
+                    </div>
+                    <a href="#" class="add-item">+ Add New Item</a>
+                    <a href="#" class="deleteitem1" >- Delete Item</a> 
+                </div>
+
+                <div class="category">
+                    <h4>Beauty and Health</h4>
+                    <div class="item">
+                        <span>Hair and Makeup</span>
+                        <span class="price">₹0.00</span>
+                    </div>
+                    <div class="item">
+                        <span>Pre-wedding Pampering</span>
+                        <span class="price">₹0.00</span>
+                    </div>
+                    <a href="#" class="add-item">+ Add New Item</a>
+                    <a href="#" class="deleteitem1">- Delete Item</a> 
+                </div>
+
+                <div class="category">
+                    <h4>Flowers</h4>
+                    <div class="item">
+                        <span>Bride Bouquet</span>
+                        <span class="price">₹0.00</span>
+                    </div>
+                    <div class="item">
+                        <span>Bridesmaid Bouquets</span>
+                        <span class="price">₹0.00</span>
+                    </div>
+                    <a href="#" class="add-item">+ Add New Item</a>
+                    <a href="#" class="deleteitem1">- Delete Item</a> 
+                </div>
+
+                <div class="category">
+                    <h4>Invitations</h4>
+                    <div class="item">
+                        <span>Invitations and Reply Cards</span>
+                        <span class="price">₹0.00</span>
+                    </div>
+                    <div class="item">
+                        <span>Other Stationery</span>
+                        <span class="price">₹0.00</span>
+                    </div>
+                    <a href="#" class="add-item">+ Add New Item</a>
+                    <a href="#" class="deleteitem1">- Delete Item</a> 
+                </div>
+
+                <div class="budget-categories">
+                    <!-- Newly added categories will be inserted here -->
+                </div>
+            
+                <div class="add-category">
+                    <h4>Add New Category</h4>
+                    <input type="text" class="category-input" placeholder="Category Name" />
+                    <a href="#" class="add-item" id="add-category-btn">+ Add Category</a>
+                </div>
+
+                <div class="item">
+                    <span style=" font-size: 18px; margin-bottom: 10px;color: black; font-weight:bold; margin-top:20px;">Total Price</span>
+                    <span class="price">₹0.00</span>
+                </div>
+                <button id="downloadBudgetPdfButton">Download Budget PDF</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="budget.js"></script> <!-- Link the JavaScript file here -->
+</body>
+
+</html>

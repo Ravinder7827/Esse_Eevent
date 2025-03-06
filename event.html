@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Itinerary</title>
+    <link rel="stylesheet" href="event.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+
+<body>
+    <!-- Sidebar Start -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="5.png" alt="Logo" class="logo" />
+
+        </div>
+        <div class="menu">
+            <h3 class="app__left-panel-button"><a href="index.html">Untitled</a>
+                <span class="bp3-icon-standard bp3-icon-chevron-down app__left-panel-arrow"></span>
+            </h3>
+            <ul>
+                
+                <li class="app__left-panel-category">Venues & Vendors</li>
+                <ul>
+                    <li><a href="reception.html">Event</a></li>
+                    <li><a href="allvendor.html">My Vendors</a></li>
+                </ul>
+                <li class="app__left-panel-category">Planning Tools</li>
+                <ul>
+                    <li><a href="editguest.html">Guest List</a></li>
+                    <li><a href="checklist.html">Checklist</a></li>
+                    <li><a href="budget.html">Budget</a></li>
+                    <li><a href="event.html">Event Itinerary</a></li>
+                    <li><a href="notes.html">Notes</a></li>
+                    <li><a href="postevent.html">Post-Event</a></li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+    <!-- Sidebar End -->
+
+    <!-- Main Content Start -->
+    <div class="main-content">
+        <!-- Navbar Start -->
+        <header>
+            <div class="header-content">
+                <h1 style="margin-left:20px;">Find vendor </h1>
+                <div class="user-menu">
+                    <span style="display: block; text-align: center; font-size: 24px; color: #333;">My Projects</span>
+                    <div class="profile-icons">
+                        <div class="user-icon"><a href="index.html">+</a></div>
+                        <div class="profile-options">
+                            <a href="login.html">Logout</a> | <a href="feedback.html">Feedback</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Navbar End -->
+
+        <main>
+            <div class="container">
+                <h1>Event Itinerary</h1>
+                <p>"Crafting Unforgettable Journeys, One Event at a Time."</p>
+
+                <div class="wedding-date">
+                    <p>Event Date: <span id="eventDate"
+                            style="cursor: pointer; color: rgb(76, 76, 137); text-decoration: underline;">Set the day
+                            you say I
+                            DO</span>
+                        <input type="text" id="dateInput" style="display: none;" />
+                    </p>
+                </div>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const eventDateSpan = document.getElementById("eventDate");
+
+                        // Initialize Flatpickr
+                        const fp = flatpickr(eventDateSpan, {
+                            dateFormat: "Y-m-d",
+                            onChange: function (selectedDates, dateStr, instance) {
+                                eventDateSpan.textContent = dateStr; // Set the selected date
+                            },
+                            allowInput: false,
+                            position: 'below'
+                        });
+
+                        eventDateSpan.addEventListener("click", function () {
+                            fp.open(); // Open the calendar
+                        });
+                    });
+                </script>
+
+                <div class="itinerary-section">
+                    <h2>The Big Day</h2>
+                    <div class="timeline-container" id="timelineContainer" style="margin-left:180px;">
+                        <!-- Event Items -->
+                        <div class="timeline-item">
+                            <div class="dotted-line"></div>
+                            <div class="icon"><i class="fas fa-sun"></i></div>
+                            <div class="time">
+                                <span contenteditable="true">08:00</span>
+                                <span contenteditable="true">am</span>
+                            </div>
+                            <div class="description">
+                                <h3>Wake Up, Shower</h3>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="icon"><i class="fas fa-coffee"></i></div>
+                            <div class="time">
+                                <span contenteditable="true">08:40</span>
+                                <span contenteditable="true">am</span>
+                            </div>
+                            <div class="description">
+                                <h3>Breakfast</h3>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="icon"><i class="fas fa-paint-brush"></i></div>
+                            <div class="time">
+                                <span contenteditable="true">09:10</span>
+                                <span contenteditable="true">am</span>
+                            </div>
+                            <div class="description">
+                                <h3>Hair and makeup</h3>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="icon"><i class="fas fa-user-tie"></i></div>
+                            <div class="time">
+                                <span contenteditable="true">11:00</span>
+                                <span contenteditable="true">am</span>
+                            </div>
+                            <div class="description">
+                                <h3>Everyone gets dressed</h3>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="icon"><i class="fas fa-utensils"></i></div>
+                            <div class="time">
+                                <span contenteditable="true">11:40</span>
+                                <span contenteditable="true">am</span>
+                            </div>
+                            <div class="description">
+                                <h3>Lunch or Snack</h3>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="icon"><i class="fas fa-camera"></i></div>
+                            <div class="time">
+                                <span contenteditable="true">01:15</span>
+                                <span contenteditable="true">pm</span>
+                            </div>
+                            <div class="description">
+                                <h3>Photographer Arrives</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <button id="addTaskButton">Add Task</button>
+                    <button id="downloadPdfButton">Download PDF</button>
+                    <div id="timelineContainer"></div>
+                    <div class="itinerary-section"></div> <!-- This should contain the content you want to download as PDF -->
+                    
+
+                </div>
+
+            </div>
+
+
+        </main>
+    </div>
+    <script src="event.js"></script>
+</body>
+
+</html>

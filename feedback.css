@@ -1,0 +1,115 @@
+:root {
+    --surface-color: #fff;
+    --curve: 40;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: linear-gradient(to bottom, #f3e7e9, #e3eeff);
+
+    background-color: #fef8f8;
+  }
+  body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+.form-container {
+    flex: 1;
+    margin: 0 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    min-width: 300px; /* Ensures the form doesn't get too narrow */
+}
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #343a40;
+    text-align: center;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+label {
+    margin-bottom: 5px;
+    color: #495057;
+    display: block;
+}
+input[type="text"], input[type="email"], input[type="file"], textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+button {
+    padding: 10px 15px;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+button:hover {
+    background-color: #e0a800;
+}
+.stars {
+    display: flex;
+    margin-top: 5px;
+}
+.stars input {
+    display: none; /* Hide radio buttons */
+}
+.stars label {
+    font-size: 2rem;
+    color: #ddd; /* Default star color */
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.stars input:checked ~ label {
+    color: #ffc107; /* Color for selected stars */
+}
+.stars label:hover,
+.stars label:hover ~ label {
+    color: #ffc107; /* Color on hover */
+}
+.image-container {
+    flex: 0 0 200px; /* Fixed width for images */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-container img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-container {
+        width: 90%;
+        margin: 10px 0;
+    }
+    .image-container {
+        margin: 10px 0;
+    }
+}
+   

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EaseEvent</title>
+    
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="shortcut icon" href="favicon-32x32.png" />
+    <link rel="stylesheet" href="feedback.css">
+
+    <script>
+        WebFontConfig = {
+            google: {
+                families: ["Fira Sans:200,300,400,500&display=swap"],
+            },
+        };
+        (function (d) {
+            var wf = d.createElement("script"),
+                s = d.scripts[0];
+            wf.src = "../ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js";
+            wf.async = true;
+            s.parentNode.insertBefore(wf, s);
+        })(document);
+    </script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYK0PNCV27"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-RYK0PNCV27");
+    </script>
+ 
+
+    <meta name="description" content="Everything you need to plan your birthday, wedding, anniversary etc, literally! Planning tools, wedding, birthday, anniversary ideas, inspiration, plus the best wedding vendors and venues here." />
+    <link rel="canonical" href="index.html" />
+    
+    <!-- Other metadata omitted for brevity -->
+    
+    <link rel="preload" href="_next/static/css/ce48045614edd3fd.css" as="style" />
+    <link rel="stylesheet" href="_next/static/css/ce48045614edd3fd.css" />
+    
+    <script defer src="https://planning.wedding/_next/static/chunks/polyfills.js"></script>
+    <script defer src="https://planning.wedding/_next/static/chunks/75fc9c18.js"></script>
+    <script defer src="https://planning.wedding/_next/static/chunks/main.js"></script>
+</head>
+
+<body style="margin: 0">
+    <header class="container" style="background-color: #f8f9fa; padding: 10px 20px;">
+        <div class="basic__top-bar" style="display: flex; align-items: center; justify-content: space-between;">
+            <a aria-label="Home" href="index.html" style="text-decoration: none;">
+                <img src="5.png" alt="Logo" style="height: 60px; width: 60px;">
+            </a>
+            <div class="basic__center" style="display: flex; gap: 20px;">
+                <a class="basic__center-link" href="findvendor.html" style="text-decoration: none; color: #4A5568; font-weight: bold;">Find Vendor</a>
+                <!-- <a class="basic__center-link" href="category/category.html" style="text-decoration: none; color: #4A5568; font-weight: bold;">Create New Event</a> -->
+            </div>
+            <div class="basic__profile basic__profile_anonymous" style="display: flex; align-items: center;">
+                <div class="app__profile" style="display: flex; align-items: center;">
+                    <div class="app__profile-box" style="height: 40px; width: 40px; border-radius: 50%; background-color: #CBD5E0; margin-right: 10px;"></div>
+                    <div class="app__profile-anonymous">
+                        <span class="app__profile-anonymous-name" style="margin-right: 10px;">Anonymous</span>
+                        <div class="app__profile-anonymous-links" style="display: flex; gap: 10px;">
+                            <a class="app__profile-anonymous-a" href="login.html#" style="text-decoration: none; color: #4A5568;">Logout</a>
+                            <span>|</span>
+                            <a class="app__profile-anonymous-a" href="feedback.html" style="text-decoration: none; color: #4A5568;">Feedback</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+             
+                    <div class="landing__features-block" id="features">
+                        <div class="container">
+                            <div class="form-container">
+                                <h1>Feedback Form</h1>
+                                <form action="feedback.php" method="post" id="feedback_form">
+                                    <fieldset>
+                                        <legend>Share Your Feedback</legend>
+                        
+                                        <div class="form-group">
+                                            <label for="name">Full Name</label>
+                                            <input name="name" id="name" placeholder="Enter your name" type="text" required>
+                                        </div>
+                        
+                                        <div class="form-group">
+                                            <label for="email">E-Mail</label>
+                                            <input name="email" id="email" placeholder="Enter your email" type="email" required>
+                                        </div>
+                        
+                                        <div class="form-group">
+                                            <label for="rating">Rating</label>
+                                            <div class="stars">
+                                                <input type="radio" id="star1" name="rating" value="5" required>
+                                                <label for="star1">&#9733;</label>
+                                                <input type="radio" id="star2" name="rating" value="4">
+                                                <label for="star2">&#9733;</label>
+                                                <input type="radio" id="star3" name="rating" value="3">
+                                                <label for="star3">&#9733;</label>
+                                                <input type="radio" id="star4" name="rating" value="2">
+                                                <label for="star4">&#9733;</label>
+                                                <input type="radio" id="star5" name="rating" value="1">
+                                                <label for="star5">&#9733;</label>
+                                            </div>
+                                        </div>
+                        
+                                        <div class="form-group">
+                                            <label for="feedbk">Feedback</label>
+                                            <textarea name="feedbk" id="feedbk" placeholder="Your feedback here..." rows="4" required></textarea>
+                                        </div>
+                        
+                                        <button type="submit">Submit Feedback</button>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

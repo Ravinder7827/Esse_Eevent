@@ -1,0 +1,441 @@
+/* Global Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap');
+
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #f5f5f5;
+    height:100%;
+}
+
+
+
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    /* background-color: linear-gradient( #fbf0f3, #ebdede); */
+    background-color: #fbf0f3;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    min-height: 100vh;
+      position: fixed; /* Fix the sidebar */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align it to the left */
+}
+
+
+
+/* Style the sidebar */
+
+/* Style for the main content */
+.main-content {
+    margin-left: 290px; /* Leave space for the sidebar */
+    padding: 20px; /* Padding inside the main content */
+    background: linear-gradient(45deg, #dad5e7, #fbf0f3, #efe8e8);
+        height: 100vh; /* Occupy full viewport height */
+        box-sizing: border-box; /* Include padding in height calculation */
+        overflow-y: auto; /* Add scroll if content overflows */
+    }
+
+
+
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.menu h3 {
+    margin-bottom: 15px;
+    color: #9E7B92;
+    font-size: 1.2em;
+    font-weight: 600; /* Added bold weight for better emphasis */
+}
+
+.app__left-panel-button {
+    display: inline-block;
+    color: #9E7B92;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px 0; /* Adjusted padding for better spacing */
+    font-size: 1.2em;
+    font-weight: 600; /* Added bold weight */
+}
+
+.bp3-icon-standard {
+    margin-left: 5px;
+}
+
+.app__left-panel-button:hover {
+    color: #555;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0; /* Removed padding */
+    margin-left: 0; /* Removed default left margin */
+}
+
+.menu ul ul {
+    margin-left: 15px; /* Reduced indentation for nested lists */
+}
+
+.menu li {
+    padding: 10px 0; /* Adjusted padding */
+    color: #666;
+    transition: color 0.3s;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 400; /* Lighter weight for normal text */
+}
+
+.menu li:hover {
+    cursor: pointer;
+    color: #555; /* Darker color on hover */
+    font-weight: 600; /* Bolder on hover */
+}
+
+.app__left-panel-category {
+    color: #b6a1b6;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    font-size: 14px; /* Slightly larger text */
+    font-weight: 600; /* Bolder text */
+    margin-bottom: 5px;
+    padding-left: 5px; /* Adjusted padding */
+    text-shadow: 1px 1px #fffdfe;
+    pointer-events: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+}
+
+.profile-icons {
+    display: flex;
+    align-items: center;
+}
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+/* Guest list section */
+.guest-list-section {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+.add-guest {
+    padding: 10px 20px;
+    background-color:  #9e7b92;;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.add-guest:hover {
+    background-color:  #fbf0f3;
+    color: black;
+}
+
+.search-add-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-add-container input {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.view-options {
+    display: flex;
+    gap: 10px;
+}
+
+.view-option {
+    background-color:  #9e7b92;;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.view-option:hover {
+    background-color:  #fbf0f3;
+    color: black;
+}
+
+.guest-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.guest-list th,
+.guest-list td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+.guest-list th {
+    background-color: #f2f2f2;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Guest form styles */
+#guest-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#guest-form input,
+#guest-form select {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#guest-form button {
+    padding: 10px;
+    background-color: linear-gradient(45deg,  #fbf0f3, #efe8e8);
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+#guest-form button:hover {
+    background-color: linear-gradient(45deg,  #fbf0f3, #efe8e8)#0056b3;
+}
+
+.guest-icon {
+    margin-right: 5px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+.male {
+    background-color: linear-gradient(45deg,  #fbf0f3, #efe8e8);
+}
+
+.female {
+    background-color: linear-gradient(45deg,  #fbf0f3, #efe8e8);
+}
+
+.delete-button {
+    background-color: linear-gradient(45deg,  #fbf0f3, #efe8e8);
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: linear-gradient(45deg,  #fbf0f3, #efe8e8);
+}
+/* Guest form container */
+#guest-form-container {
+    background-color: #ffffff; /* White background */
+    padding: 20px; /* Padding around the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px 0; /* Margin for spacing */
+}
+
+/* Form inputs */
+#guest-form input,
+#guest-form select {
+    padding: 12px; /* Increased padding for inputs */
+    margin-bottom: 15px; /* Spacing between inputs */
+    border: 1px solid #ced4da; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px; /* Font size */
+    transition: border-color 0.3s; /* Transition for border color */
+}
+
+/* Focus state for inputs */
+#guest-form input:focus,
+#guest-form select:focus {
+    border-color: #fbf0f3; /* Blue border on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Submit button styles */
+#guest-form button[type="submit"] {
+    background-color: #fbf0f3; /* Blue background */
+    color: black; /* White text */
+    border: none; /* No border */
+    padding: 12px 20px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+/* Hover effect for submit button */
+#guest-form button[type="submit"]:hover {
+    background-color: #fbf0f3; /* Darker blue on hover */
+}
+
+/* Cancel button styles */
+#guest-form button[type="button"] {
+    background-color: linear-gradient(45deg,  #fbf0f3, #efe8e8); /* Red background */
+    color: black; /* White text */
+    border: none; /* No border */
+    padding: 12px 20px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+/* Hover effect for cancel button */
+#guest-form button[type="button"]:hover {
+    background-color: linear-gradient(45deg,  #fbf0f3, #efe8e8); /* Darker red on hover */
+}
+
+
+.hidden {
+    display: none;
+}
+
+#guest-form-container {
+    position: fixed; /* Position relative to the viewport */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Move to center */
+    background: white; /* Background color */
+    border: 1px solid #ccc; /* Border */
+    padding: 20px; /* Padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    z-index: 1000; /* Ensure it’s on top */
+    width: 600px; /* Set a width */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Space between items */
+    position: relative; /* Needed for the close button */
+}
+
+.close-button {
+    position: absolute; /* Position in the top right corner */
+    top: 10px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+    background: none; /* No background */
+    border: none; /* No border */
+    font-size: 20px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.close-button:hover {
+    color:#d1a6a6; /* Change color on hover */
+}
+
+.form-group {
+    display: flex; /* Use flexbox for form group */
+    flex-direction: column; /* Stack label and input vertically */
+}
+
+label {
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+input, select {
+    padding: 8px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 4px; /* Rounded corners */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.hidden {
+    display: none;
+}
+
+#toggle-guest-form {
+    display: none; /* Hide the checkbox */
+}
+
+#guest-form-container {
+    display: none; /* Initially hide the form */
+}
+
+#toggle-guest-form:checked + #guest-form-container {
+    display: block; /* Show the form when the checkbox is checked */
+}
+
+/* Style for the close button */
+.close-button {
+    cursor: pointer;
+}
+
+.add-guest {
+    display: inline-block; /* Ensure it's an inline-block element */
+    padding: 10px 20px;   /* Adjust padding for spacing */
+    font-size: 16px;       /* Set a consistent font size */
+    white-space: nowrap;   /* Prevent text from wrapping */
+    margin-top:20px;
+}
+
+
+.centered-tagline {
+    text-align: center; /* Center the text */
+    font-size: 1.2em; /* Optional: Adjust font size */
+    margin: 20px 0; /* Optional: Add some margin for spacing */
+}
+
+.logo {
+    width: 100px; /* Reduced width for a smaller logo */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Centering the image */
+    margin: 0 auto; /* Centering */
+ 
+    transition: transform 0.3s; /* Smooth scaling effect */
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Vendor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="findvendor.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, #f3e7e9, #e3eeff);
+        }
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer; /* Pointer cursor for clickable cards */
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .card:hover img {
+            transform: scale(1.05);
+        }
+        .card-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+        .card-content h3 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+        .card-content p {
+            margin: 0;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+            display: none; /* Initially hide the map */
+        }
+    </style>
+</head>
+<body class="p-8">
+    <div class="max-w-7xl mx-auto">
+        <h1 class="text-center text-2xl font-semibold mb-4">Find Vendor</h1>
+        <div class="flex items-center justify-between mb-6">
+            <div class="flex space-x-4">
+                <input id="category" class="border border-gray-300 rounded px-4 py-2" placeholder="Category" type="text"/>
+                <input id="location" class="border border-gray-300 rounded px-4 py-2" placeholder="NEAR city or region" type="text"/>
+                <button id="searchBtn" class="bg-purple-600 text-white px-4 py-2 rounded">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <button id="showMapBtn" class="text-purple-600">Show on the map</button>
+        </div>
+        <div class="flex justify-between mb-4">
+            <h2 class="text-xl font-bold">Entire world</h2>
+        </div>
+        <div id="vendorContainer" class="grid grid-cols-4 gap-4">
+            <!-- Vendor cards will be generated here -->
+        </div>
+        <div id="map"></div> <!-- Map container -->
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=5e26a7ee6emsh4de8bab2c25cac9p1519ffjsn261cf33965e0"></script>
+    <script src="findvendor.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.text-center {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.border-dashed {
+    border-style: dashed;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.shadow-lg {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Guest List</title>
+    <link rel="stylesheet" href="editguest.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script> <!-- Include html2pdf -->
+</head>
+<body>
+    <!-- Sidebar Start -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="5.png" alt="Logo" class="logo" />
+        </div>
+        <div class="menu">
+            <h3 class="app__left-panel-button"><a href="index.html">Untitled</a>
+                <span class="bp3-icon-standard bp3-icon-chevron-down app__left-panel-arrow"></span>
+            </h3>
+            <ul>
+                <li class="app__left-panel-category">Venues & Vendors</li>
+                <ul>
+                    <li><a href="reception.html">Event</a></li>
+                    <li><a href="allvendor.html">My Vendors</a></li>
+                </ul>
+                <li class="app__left-panel-category">Planning Tools</li>
+                <ul>
+                    <li><a href="editguest.html">Guest List</a></li>
+                    <li><a href="checklist.html">Checklist</a></li>
+                    <li><a href="budget.html">Budget</a></li>
+                    <li><a href="event.html">Event Itinerary</a></li>
+                    <li><a href="notes.html">Notes</a></li>
+                    <li><a href="postevent.html">Post-Event</a></li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+    <!-- Sidebar End -->
+
+    <!-- Main Content Start -->
+    <div class="main-content">
+        <!-- Navbar Start -->
+        <header>
+            <div class="header-content">
+                <h1 style="margin-left:20px;">Find vendor </h1>
+                <div class="user-menu">
+                    <span style="display: block; text-align: center; font-size: 24px; color: #333;">My Projects</span>
+                    <div class="profile-icons">
+                        <div class="user-icon"><a href="index.html">+</a></div>
+                        <div class="profile-options">
+                            <a href="login.html">Logout</a> | <a href="feedback.html">Feedback</a>
+                        </div>
+                </div>
+            </div>
+        </header>
+        <!-- Navbar End -->
+
+        <main>
+            <section class="guest-list-section">
+                <h1 style="text-align: center;">Event Attendees</h1>
+                <p class="centered-tagline">"Effortlessly Manage Your Guestlist – Every Name, Every Detail, All in One Place!"</p>
+
+                <div class="search-add-container">
+                    <input type="text" id="search-bar" placeholder="Quick search" onkeyup="filterGuests()" />
+                    <button class="add-guest" onclick="document.getElementById('toggle-guest-form').checked = true;">+ Add guest</button>
+                    <button id="downloadPdfButton">Download PDF</button>
+                </div>
+
+                <div class="view-options">
+                    <button class="view-option active">Full table</button>
+                </div>
+
+                <table class="guest-list">
+                    <thead style="background-color: #9e7b92; color: black;">
+                        <tr>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Phone Number</th>
+                            <th>Age</th>
+                            <th>Comment</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="guest-list-body">
+                        <!-- Existing rows can go here -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Guest form (hidden initially) -->
+            <input type="checkbox" id="toggle-guest-form" style="display: none;" />
+            <div id="guest-form-container">
+                <button class="close-button" onclick="document.getElementById('toggle-guest-form').checked = false;">✖</button>
+                <form id="guest-form" action="editguest.php" method="post">
+                    <div class="form-group">
+                        <label for="guest-name">Guest Name</label>
+                        <input type="text" name="guest-name" id="guest-name" placeholder="Guest Name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="guest-family">Address</label>
+                        <input type="text" name="guest-family" id="guest-family" placeholder="Family Name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="guest-table">Phone Number</label>
+                        <input type="text" name="guest-table" id="guest-table" placeholder="Phone Number" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="guest-main-course">Age</label>
+                        <input type="number" name="guest-main-course" id="guest-main-course" placeholder="Enter the Age" />
+                    </div>
+                    <div class="form-group">
+                        <label for="guest-comment">Comment</label>
+                        <input type="text" name="guest-comment" id="guest-comment" placeholder="Comment" />
+                    </div>
+                    <button type="submit" style="background-color: #9e7b92; color: white; border: none; padding: 10px 15px; cursor: pointer;">Add Guest</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="editguest.js"></script>
+</body>
+</html>

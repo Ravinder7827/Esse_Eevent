@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Checklist</title>
+    <link rel="stylesheet" href="checklist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Material Icons Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+
+<body>
+    
+    <!-- Sidebar Start -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="5.png" alt="Logo" class="logo" />
+        </div>
+        <div class="menu">
+            <h3 class="app__left-panel-button"><a href="index.html">Untitled</a>
+                <span class="bp3-icon-standard bp3-icon-chevron-down app__left-panel-arrow"></span>
+            </h3>
+            <ul>
+                
+                <li class="app__left-panel-category">Venues & Vendors</li>
+                <ul>
+                    <li><a href="reception.html">Event</a></li>
+                    <li><a href="allvendor.html">My Vendors</a></li>
+                </ul>
+                <li class="app__left-panel-category">Planning Tools</li>
+                <ul>
+                    <li><a href="editguest.html">Guest List</a></li>
+                    <li><a href="checklist.html">Checklist</a></li>
+                    <li><a href="budget.html">Budget</a></li>
+                    <li><a href="event.html">Event Itinerary</a></li>
+                    <li><a href="notes.html">Notes</a></li>
+                    <li><a href="postevent.html">Post-Event</a></li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+    <!-- Sidebar End -->
+
+    <div class="main-content">
+        <header>
+            <div class="header-content">
+                <h1 style="margin-left:20px;">Find vendor </h1>
+                <div class="user-menu">
+                    <span style="display: block; text-align: center; font-size: 24px; color: #333;">My Projects</span>
+                    <div class="profile-icons">
+                        <div class="user-icon"><a href="index.html">+</a></div>
+                        <div class="profile-options">
+                            <a href="login.html">Logout</a> | <a href="feedback.html">Feedback</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section> <!-- Checklist Start -->
+            <div class="checklist">
+                <div class="checklist-content">
+                    <h2>Event Checklist</h2>
+                    <p>This is your personal to-do list. Add, remove, or complete any task and keep on top of your
+                        deadlines.</p>
+                        <p>Event Date: <span id="eventDate" style="cursor: pointer; color: blue; text-decoration: underline;">Set the day you say I DO</span>
+                            <input type="text" id="dateInput" style="display: none;" /></p>
+                            
+                </div>
+    
+                <div class="tasks">
+                    <h3 style="text-align: center;">Task to be done!</h3> <!-- Centered heading -->
+                    <ul id="taskList">
+                        <li>
+                            <input type="checkbox" id="task1">
+                            <label for="task1"><span>Find Your Venues</span></label>
+                            <button class="removeTaskButton" aria-label="Remove task">
+                                <i class="material-icons">delete</i>
+                            </button>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="task2">
+                            <label for="task2"><span>Start Planning Your Guest List</span></label>
+                            <button class="removeTaskButton" aria-label="Remove task">
+                                <i class="material-icons">delete</i>
+                            </button>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="task3">
+                            <label for="task3"><span>Set A Budget</span></label>
+                            <button class="removeTaskButton" aria-label="Remove task">
+                                <i class="material-icons">delete</i>
+                            </button>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="task4">
+                            <label for="task4"><span>Make Your Venue Choice</span></label>
+                            <button class="removeTaskButton" aria-label="Remove task">
+                                <i class="material-icons">delete</i>
+                            </button>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="task5">
+                            <label for="task5"><span>Choose Your Event Attire</span></label>
+                            <button class="removeTaskButton" aria-label="Remove task">
+                                <i class="material-icons">delete</i>
+                            </button>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="task6">
+                            <label for="task6"><span>Find A Florist</span></label>
+                            <button class="removeTaskButton" aria-label="Remove task">
+                                <i class="material-icons">delete</i>
+                            </button>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="task7">
+                            <label for="task7"><span>Choose Your Jewelry</span></label>
+                            <button class="removeTaskButton" aria-label="Remove task">
+                                <i class="material-icons">delete</i>
+                            </button>
+                        </li>
+                    </ul>
+                    
+                    <div class="add-task">
+                        <input type="text" id="newTask" placeholder="Add a new task..." style="display: none;">
+                        <!-- Initially hidden -->
+                        <div class="button-container" style="align-items:center;">
+                            <button id="addTaskButton">+ Add Task</button>
+                            <button id="clearCompletedButton">Clear Completed Tasks</button>
+                            <button id="downloadTasksButton">Download Tasks</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Checklist End -->
+                <div id="taskDisplay"></div>
+        </section>     
+
+    <script src="checklist.js"></script> <!-- Link the JavaScript file here -->
+</body>
+
+</html>

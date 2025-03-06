@@ -1,0 +1,255 @@
+/* Global Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap');
+
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #f5f5f5;
+    height:100%;
+}
+
+
+
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    /* background-color: linear-gradient( #fbf0f3, #ebdede); */
+    background-color: #fbf0f3;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    min-height: 100vh;
+      position: fixed; /* Fix the sidebar */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align it to the left */
+}
+
+
+
+/* Style the sidebar */
+
+/* Style for the main content */
+.main-content {
+    margin-left: 290px; /* Leave space for the sidebar */
+    padding: 20px; /* Padding inside the main content */
+    background: linear-gradient(45deg, #dad5e7, #fbf0f3, #efe8e8);
+        height: 100vh; /* Occupy full viewport height */
+        box-sizing: border-box; /* Include padding in height calculation */
+        overflow-y: auto; /* Add scroll if content overflows */
+    }
+
+
+
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.menu h3 {
+    margin-bottom: 15px;
+    color: #9E7B92;
+    font-size: 1.2em;
+    font-weight: 600; /* Added bold weight for better emphasis */
+}
+
+.app__left-panel-button {
+    display: inline-block;
+    color: #9E7B92;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px 0; /* Adjusted padding for better spacing */
+    font-size: 1.2em;
+    font-weight: 600; /* Added bold weight */
+}
+
+.bp3-icon-standard {
+    margin-left: 5px;
+}
+
+.app__left-panel-button:hover {
+    color: #555;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0; /* Removed padding */
+    margin-left: 0; /* Removed default left margin */
+}
+
+.menu ul ul {
+    margin-left: 15px; /* Reduced indentation for nested lists */
+}
+
+.menu li {
+    padding: 10px 0; /* Adjusted padding */
+    color: #666;
+    transition: color 0.3s;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 400; /* Lighter weight for normal text */
+}
+
+.menu li:hover {
+    cursor: pointer;
+    color: #555; /* Darker color on hover */
+    font-weight: 600; /* Bolder on hover */
+}
+
+.app__left-panel-category {
+    color: #b6a1b6;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    font-size: 14px; /* Slightly larger text */
+    font-weight: 600; /* Bolder text */
+    margin-bottom: 5px;
+    padding-left: 5px; /* Adjusted padding */
+    text-shadow: 1px 1px #fffdfe;
+    pointer-events: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+}
+
+.profile-icons {
+    display: flex;
+    align-items: center;
+}
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+/* checklist css */
+
+.checklist {
+    background: linear-gradient(45deg, #dad5e7, #fbf0f3, #efe8e8); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Add some padding */
+    margin: 20px; /* Add some margin around the checklist */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.checklist-content {
+    text-align: center; /* Center content */
+    margin-bottom: 20px; /* Space below content */
+}
+
+.tasks {
+    margin-top: 20px; /* Space above tasks */
+}
+
+.tasks h3 {
+    margin-bottom: 15px; /* Space below heading */
+}
+
+.tasks ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.tasks ul li {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between checkbox and button */
+    background-color: #f9f9f9;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px; 
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-task {
+    text-align: center; /* Center buttons below task list */
+}
+
+.button-container {
+    display: flex; /* Align buttons in a row */
+    gap: 10px; /* Space between buttons */
+    justify-content: center; /* Center buttons */
+    margin: 20px 0; /* Space around button container */
+}
+
+button {
+    padding: 10px 15px; /* Padding inside buttons */
+    border: none; /* Removes default border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #b390a7; /* Button background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #f1ebf0; /* Darker shade on hover */
+}
+
+.removeTaskButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: rgb(191, 189, 189); /* Color for the delete icon */
+    font-size: 20px; /* Adjust size as needed */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center vertically */
+}
+
+.material-icons {
+    vertical-align: middle; /* Align icon vertically */
+}
+
+.flatpickr-calendar {
+    z-index: 1000; /* Make sure the calendar is on top */
+}
+
+
+.logo {
+    width: 100px; /* Reduced width for a smaller logo */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Centering the image */
+    margin: 0 auto; /* Centering */
+ 
+    transition: transform 0.3s; /* Smooth scaling effect */
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}

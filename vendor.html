@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Profile</title>
+    <link rel="stylesheet" href="vendor.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        body{
+            background: linear-gradient(45deg, #dad5e7, #fbf0f3, #efe8e8);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Vendor Header -->
+        <div class="vendor-header">
+            <img src="Login/5.png" alt="Vendor Image" class="vendor-img" style="height: 100px; width: 100px;">
+            <h1 class="vendor-Details">Vendor Details</h1><br>
+            <img id="vendorImage" src="" alt="Vendor Image" style="height: 500px; width: 900px;"/>
+            <h2 id="vendorTitle"></h2>
+            <p id="vendorCategory"></p>
+        </div>
+        
+        <!-- Navigation Bar -->
+        <div class="nav-bar">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+                <li><a href="#details">Details</a></li>
+                <li><a href="#photos">Photos</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+            </ul>
+        </div>
+
+        <!-- Content Section -->
+        <div class="content-section">
+            <!-- About Section -->
+            <div class="about-section" id="about">
+                <h2>About</h2>
+                <p>This section contains information about the vendor, their experience, services offered, and any other details that describe them.</p>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="contact-section" id="contacts">
+                <h2>Contact Us</h2>
+                <button class="contact-btn add-event">Add to Event</button>
+                
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/your-instagram-profile" target="_blank">
+                        <i class="ri-instagram-line" style="font-size: 24px;"></i>
+                    </a>
+                    <a href="https://www.whatsapp.com/your-whatsapp-profile" target="_blank">
+                        <i class="ri-whatsapp-line" style="font-size: 24px;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Details Section -->
+        <div class="details-section" id="details">
+            <h2>Vendor Details</h2>
+            <p>Details about the vendor, location, services, and specialties can be displayed here.</p>
+        </div>
+
+        <!-- Photos & Videos Section -->
+        <div class="media-section" id="photos">
+            <h2>Photos & Videos</h2>
+            <div class="media-gallery">
+                <img src="Login/3.png" alt="Vendor Photo">
+                <img src="Login/4.png" alt="Vendor Photo">
+            </div>
+        </div>
+
+        <!-- Review Section -->
+        <div class="review-section" id="reviews">
+            <h2>Reviews</h2>
+            <div class="stars">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <button class="contact-btn add-review"><a href="feedback.html">Add Review</a></button>
+        </div>
+
+        <!-- Pricing Section -->
+        <div class="pricing-section" id="pricing">
+            <h2>Pricing</h2>
+            <ul>
+                <li>1 hour: 1000Rs</li>
+                <li>2 hours: 2000Rs</li>
+                <li>3 hours: 3000Rs</li>
+            </ul>
+            <button class="contact-btn download-pricing"><a href="budget.html">Download Pricing</a></button>
+        </div>
+    </div>
+   
+    <script>
+        const vendor = JSON.parse(localStorage.getItem("selectedVendor"));
+        if (vendor) {
+            document.getElementById("vendorImage").src = vendor.imgSrc;
+            document.getElementById("vendorTitle").textContent = vendor.title;
+            document.getElementById("vendorCategory").textContent = vendor.category;
+        } else {
+            document.body.innerHTML = '<p>No vendor details available.</p>';
+        }
+    </script>
+
+    <script src="vendor.js"></script>
+</body>
+</html>

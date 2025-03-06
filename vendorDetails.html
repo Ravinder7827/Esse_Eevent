@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <!-- Link to vendorDetails.css -->
+    <link rel="stylesheet" href="vendorDetails.css">
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Include Bootstrap Validator -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.min.css"/>
+</head>
+<body>
+
+  <!-- Vendor Input Form Start -->
+  <div class="grid-item form-container" style="background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); padding: 20px; margin: 20px;">
+    <form class="well form-horizontal" action="vendorDetails.php" method="post" id="contact_form" style="width: 100%;" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Event Vendor Details</legend>
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input name="Name" type="text" id="name" required>
+            </div>
+            <!-- E-Mail -->
+            <div class="form-group">
+                <label for="email">E-Mail</label>
+                <input name="email" type="email" id="email" required>
+            </div>
+            <!-- Phone No -->
+            <div class="form-group">
+                <label for="phone">Phone No.</label>
+                <input name="phone" type="text" id="phone" required>
+            </div>
+            <!-- State -->
+            <div class="form-group">
+                <label for="state">State</label>
+                <input name="state" type="text" id="state" required>
+            </div>
+            <!-- City -->
+            <div class="form-group">
+                <label for="city">City</label>
+                <input name="city" type="text" id="city" required>
+            </div>
+            <!-- Category -->
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select name="category" id="category" required>
+                    <option value="">Select Category</option>
+                    <option value="catering">Catering</option>
+                    <option value="photography">Photography</option>
+                    <option value="music">Music</option>
+                    <option value="decoration">Decoration</option>
+                </select>
+            </div>
+            <!-- About -->
+            <div class="form-group">
+                <label for="comment">About</label>
+                <textarea name="comment" rows="4" id="comment" required></textarea>
+            </div>
+            <!-- File Upload -->
+            <div class="form-group">
+                <label for="photos">Upload Photos</label>
+                <input type="file" name="photos[]" id="photos" multiple>
+            </div>
+            <!-- Submit Button -->
+            <div class="button-container">
+                <button type="submit">Submit</button>
+            </div>
+        </fieldset>
+    </form>
+</div> <!-- Vendor Input Form End -->
+</div>
+
+<script src="vendorDetails.js"></script>
+</body>
+</html>

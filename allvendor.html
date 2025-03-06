@@ -1,0 +1,127 @@
+<html lang="en"></html>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link rel="stylesheet" href="allvendor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>All Vendors</title>
+
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
+            color: #4a4a4a;
+            background: linear-gradient(to bottom, #f3e7e9, #e3eeff);
+        }
+  </style>
+ </head>
+ <body class="p-8">
+    <div class="sidebar">
+        <div class="logo">
+            <img src="5.png" alt="Logo" class="logo" />
+        </div>
+        <div class="menu">
+            <h3 class="app__left-panel-button"><a href="index.html">Untitled</a>
+                <span class="bp3-icon-standard bp3-icon-chevron-down app__left-panel-arrow"></span>
+            </h3>
+            <ul>
+                
+                <li class="app__left-panel-category">Venues & Vendors</li>
+                <ul>
+                    <li><a href="reception.html">Event</a></li>
+                    <li><a href="allvendor.html">My Vendors</a></li>
+                </ul>
+                <li class="app__left-panel-category">Planning Tools</li>
+                <ul>
+                    <li><a href="editguest.html">Guest List</a></li>
+                    <li><a href="checklist.html">Checklist</a></li>
+                    <li><a href="budget.html">Budget</a></li>
+                    <li><a href="event.html">Event Itinerary</a></li>
+                    <li><a href="notes.html">Notes</a></li>
+                    <li><a href="postevent.html">Post-Event</a></li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+    <!-- Sidebar End -->
+
+    <div class="main-content">
+        <header>
+            <div class="header-content">
+                <h1 style="margin-left:20px;">Find vendor </h1>
+                <div class="user-menu">
+                    <span style="display: block; text-align: center; font-size: 24px; color: #333;">My Projects</span>
+                    <div class="profile-icons">
+                        <div class="user-icon"><a href="index.html">+</a></div>
+                        <div class="profile-options">
+                            <a href="login.html">Logout</a> | <a href="feedback.html">Feedback</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header><br>
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-center text-2xl font-semibold mb-4">All Vendors</h1>
+        <p class="text-center mb-8">
+            Discover the perfect <strong>vendors, venues, and services</strong> for your wedding day by trying your luck in our extensive database of verified professionals. Additionally, you have the freedom to add a <strong>custom vendor</strong> to your personal list, ensuring that every aspect of your special day is tailored to your unique vision.
+        </p>
+        <div class="flex space-x-4 mb-8" id="vendors-container">
+            <div class="bg-white shadow-md rounded-lg overflow-hidden w-1/4">
+                <img alt="Noemi Bellante Wedding Planner" class="w-full h-40 object-cover" src="https://storage.googleapis.com/a1aa/image/xRyVNwd8aMavNl2At72R2hXDM7yHfSPjKGDRhHs5WLJ0zNzJA.jpg"/>
+                <div class="p-4">
+                    <span class="block text-sm text-purple-600 mb-1">Destination</span>
+                    <span class="block text-sm font-medium mb-1">Event Planner</span>
+                    <span class="block text-sm font-semibold">Mumbai</span>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg overflow-hidden w-1/4">
+                <img alt="Harmony Weddings (Thailand) Co.,Ltd." class="w-full h-40 object-cover" src="https://storage.googleapis.com/a1aa/image/UTIudfw2o1UKXiB2aQKGxWxKWlw6rbu4ZjoGA55eVTeNP3MnA.jpg"/>
+                <div class="p-4">
+                    <span class="block text-sm text-purple-600 mb-1">Destination</span>
+                    <span class="block text-sm font-medium mb-1">Event Planner</span>
+                    <span class="block text-sm font-semibold">Indore</span>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg overflow-hidden w-1/4">
+                <img alt="AGENCE LB" class="w-full h-40 object-cover" src="https://storage.googleapis.com/a1aa/image/ES5zsUFAMircKN5o9eK8gMVnE1ueyuLMmsKIrSIJsk6knbmTA.jpg"/>
+                <div class="p-4">
+                    <span class="block text-sm text-purple-600 mb-1">Destination</span>
+                    <span class="block text-sm font-medium mb-1">Event Planner</span>
+                    <span class="block text-sm font-semibold">Bengalore</span>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg flex items-center justify-center w-1/4 border-2 border-dashed border-purple-600" id="add-vendor-btn">
+                <span class="text-purple-600 text-2xl">+</span>
+                <span class="block text-sm text-purple-600 mt-2">Search and Add Vendors</span>
+            </div>
+        </div>
+        <button id="refresh-btn" class="bg-red-500 text-white rounded-lg px-4 py-2">Refresh Vendors</button>
+
+        <p class="mb-4">
+            Additionally, we present recommended vendors who are conveniently located near you or within your area. These suppliers are identified with a <strong>"near"</strong> tag. You have the flexibility to choose whether to hide these suggestions or keep them visible, allowing you to personalize your search experience based on your preferences.
+        </p>
+         
+        <p class="mb-4">
+            If you haven't come across the desired supplier within our existing category, you have the option to <strong>add a custom vendor</strong> to the list. This allows you to keep all your contacts and pertinent details organized in a single location, ensuring everything stays up to date.
+        </p>
+        <button id="add-custom-vendor-btn" class="text-purple-600 mb-8 flex items-center">
+            <i class="fas fa-plus mr-2"></i>
+            Add custom vendor
+        </button>
+         
+        <button id="download-pdf-btn" class="bg-white border border-gray-300 rounded-lg px-4 py-2 flex items-center">
+            <i class="fas fa-file-pdf mr-2"></i>
+            Download PDF file
+        </button>
+    </div>
+
+    <script src="allvendor.js"></script>
+
+ </body>
+</html>
